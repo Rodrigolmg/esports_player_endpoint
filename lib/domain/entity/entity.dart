@@ -6,3 +6,4 @@ part 'player_detail/player_detail_entity.dart';
 part 'player_detail/color_entity.dart';
 part 'player_detail/sport_entity.dart';
 part 'player_detail/country_entity.dart';
+part 'player_detail/team_entity.dart';
