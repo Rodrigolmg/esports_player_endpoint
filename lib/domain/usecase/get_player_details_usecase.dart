@@ -1,7 +1,4 @@
-import 'package:dartz/dartz.dart';
-import 'package:esports_player_endpoint/core/core.dart';
-import 'package:esports_player_endpoint/domain/entity/entity.dart';
-import 'package:esports_player_endpoint/domain/repository/repository_contract.dart';
+part of usecase;
 
 class GetPlayerDetailsUseCase implements UseCase<PlayerDetailEntity?, int?> {
 

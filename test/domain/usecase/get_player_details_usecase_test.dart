@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:esports_player_endpoint/domain/entity/entity.dart';
 import 'package:esports_player_endpoint/domain/repository/repository_contract.dart';
-import 'package:esports_player_endpoint/domain/usecase/get_player_details_usecase.dart';
+import 'package:esports_player_endpoint/domain/usecase/usecase.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
