@@ -3,7 +3,7 @@ import 'package:esports_player_endpoint/core/core.dart';
 import 'package:esports_player_endpoint/domain/entity/entity.dart';
 import 'package:esports_player_endpoint/domain/repository/repository_contract.dart';
 
-class GetPlayerDetailsUseCase implements UseCase<PlayerDetailEntity, int?> {
+class GetPlayerDetailsUseCase implements UseCase<PlayerDetailEntity?, int?> {
 
   final PlayerDetailRepository repository;
 
@@ -12,7 +12,7 @@ class GetPlayerDetailsUseCase implements UseCase<PlayerDetailEntity, int?> {
   });
 
   @override
-  Future<Either<Failure, PlayerDetailEntity>> call([int? playerId]) {
+  Future<Either<Failure, PlayerDetailEntity?>> call([int? playerId]) {
     return repository.getPlayerDetails(playerId);
   }
 

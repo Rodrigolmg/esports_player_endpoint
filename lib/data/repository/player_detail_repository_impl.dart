@@ -13,7 +13,7 @@ class PlayerDetailRepositoryImpl implements PlayerDetailRepository {
   });
 
   @override
-  Future<Either<Failure, PlayerDetailEntity>> getPlayerDetails(int? playerId) async {
+  Future<Either<Failure, PlayerDetailEntity?>> getPlayerDetails(int? playerId) async {
 
     if(await networkInfo.isConnected){
       try {
@@ -28,8 +28,8 @@ class PlayerDetailRepositoryImpl implements PlayerDetailRepository {
       }
     } else {
       try {
-        PlayerDetailModel lastPlayerDetail =
-          await localDataSource.getLastplayerDetails(playerId);
+        PlayerDetailModel? lastPlayerDetail =
+          await localDataSource.getLastPlayerDetails(playerId);
         return Right(lastPlayerDetail);
       } on CacheException {
         return Left(CacheFailure());

@@ -34,7 +34,7 @@ void main() {
 
   const int tPlayerId = 1;
 
-  PlayerDetailModel playerDetail = PlayerDetailModel(
+  PlayerDetailModel? playerDetail = PlayerDetailModel(
       id: tPlayerId
   );
 
@@ -98,25 +98,25 @@ void main() {
 
     test('Should return last locally cached data when the cached data is present',
             () async {
-          when(mockLocalDataSource.getLastplayerDetails(tPlayerId))
+          when(mockLocalDataSource.getLastPlayerDetails(tPlayerId))
               .thenAnswer((_) async => playerDetail);
 
           final result = await repositoryImpl.getPlayerDetails(tPlayerId);
 
           verifyZeroInteractions(mockRemoteDataSource);
-          verify(mockLocalDataSource.getLastplayerDetails(tPlayerId));
+          verify(mockLocalDataSource.getLastPlayerDetails(tPlayerId));
           expect(result, equals(Right(playerDetail)));
         });
 
     test('Should return CacheFailure when there is no cached data',
             () async {
-          when(mockLocalDataSource.getLastplayerDetails(tPlayerId))
+          when(mockLocalDataSource.getLastPlayerDetails(tPlayerId))
               .thenThrow(CacheException());
 
           final result = await repositoryImpl.getPlayerDetails(tPlayerId);
 
           verifyZeroInteractions(mockRemoteDataSource);
-          verify(mockLocalDataSource.getLastplayerDetails(tPlayerId));
+          verify(mockLocalDataSource.getLastPlayerDetails(tPlayerId));
           expect(result, equals(Left(CacheFailure())));
         });
   });
