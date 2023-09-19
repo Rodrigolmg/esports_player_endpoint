@@ -1,0 +1,24 @@
+{
+  "country": {
+    "alpha2": "CN",
+    "name": "China"
+  },
+  "id": 365510,
+  "name": "Aurora Esports club",
+  "nameCode": "AEC",
+  "national": false,
+  "shortName": "Aurora Esports club",
+  "slug": "aurora-esports-club",
+  "sport": {
+    "id": 72,
+    "name": "E-sports",
+    "slug": "esports"
+  },
+  "teamColors": {
+    "primary": "#52b030",
+    "secondary": "#52b030",
+    "text": "#ffffff"
+  },
+  "type": 0,
+  "userCount": 1
+}
