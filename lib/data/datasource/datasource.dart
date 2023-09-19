@@ -1,5 +1,7 @@
 library datasource;
 
+import 'dart:typed_data';
+
 import 'package:dio/dio.dart';
 import 'package:esports_player_endpoint/core/core.dart';
 import 'package:esports_player_endpoint/data/model/model.dart';
@@ -11,6 +13,7 @@ part 'datasource_box_name.dart';
 
 // remote
 part 'remote/player_detail_datasource.dart';
+part 'remote/player_image_local_datasource.dart';
 
 // local
 part 'local/player_detail_local_datasource.dart';
